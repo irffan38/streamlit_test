@@ -25,4 +25,4 @@ base_currency = st.selectbox('Select base currency:', currencies)
 url = f'https://api.vatcomply.com/rates?base={base_currency}'
 response = requests.get(url)
 
-if response.status_cod_
+if response.status_cod_:
