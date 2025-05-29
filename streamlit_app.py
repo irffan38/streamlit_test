@@ -1,6 +1,8 @@
 import streamlit as st 
 import requests
 
+st.markdown("<div style='text-align: center;'><img src='logo.png' width='150'></div>", unsafe_allow_html=True)
+
 # Set the app title 
 st.title('Ipan Exchancer') 
 
