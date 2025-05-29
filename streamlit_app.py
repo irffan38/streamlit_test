@@ -2,10 +2,10 @@ import streamlit as st
 import requests
 
 # Set the app title 
-st.title('Promosi! Promosi! Service Cuci Kereta Serendah RM50,000!!!!') 
+st.title('Ipan Exchancer') 
 
 # Add a welcome message 
-st.write('Mencari Dato Fighter!') 
+st.write('No money, No talk') 
 
 # Create a text input 
 widgetuser_input = st.text_input('Enter a custom message:', 'Hello, Streamlit!') 
