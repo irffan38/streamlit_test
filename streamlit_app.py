@@ -13,15 +13,18 @@ widgetuser_input = st.text_input('Enter a custom message:', 'Hello, Streamlit!')
 # Display the customized message 
 st.write('Customized Message:', widgetuser_input)
 
+# Dropdown to select base currency
+currencies = ['MYR', 'USD', 'EUR', 'GBP', 'SGD', 'JPY', 'CNY', 'AUD', 'CAD']
+base_currency = st.selectbox('Select base currency:', currencies)
 
-#API calls
-response = requests.get('https://api.vatcomply.com/rates?base=MYR')
+# Fetch exchange rates using selected base currency
+url = f'https://api.vatcomply.com/rates?base={base_currency}'
+response = requests.get(url)
 
 if response.status_code == 200:
     data = response.json()
-    st.write('Output:')
-    st.json(data)  # nicely formatted JSON output
+    st.write(f'Exchange Rates (Base: {base_currency}):')
+    st.json(data)  # Display JSON formatted response
 else:
     st.error(f"API call failed with status code: {response.status_code}")
-
 
