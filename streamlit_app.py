@@ -2,7 +2,8 @@ import streamlit as st
 import requests
 
 # Show UMPSA logo
-st.image("https://upload.wikimedia.org/wikipedia/ms/2/29/Logo_Universiti_Malaysia_Pahang.svg", width=200)
+st.image("https://upload.wikimedia.org/wikipedia/en/thumb/0/01/UMPSA_LOGO_2023.svg/512px-UMPSA_LOGO_2023.svg.png", width=200)
+
 
 # Set the app title 
 st.title('Ipan Exchancer') 
