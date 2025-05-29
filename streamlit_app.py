@@ -4,7 +4,6 @@ import requests
 # Show UMPSA logo
 st.image("https://upload.wikimedia.org/wikipedia/en/thumb/0/01/UMPSA_LOGO_2023.svg/512px-UMPSA_LOGO_2023.svg.png", width=200)
 
-
 # Set the app title 
 st.title('Ipan Exchancer') 
 
@@ -25,4 +24,10 @@ base_currency = st.selectbox('Select base currency:', currencies)
 url = f'https://api.vatcomply.com/rates?base={base_currency}'
 response = requests.get(url)
 
-if response.status_cod_:
+# ✅ FIXED: Corrected the typo here
+if response.status_code == 200:
+    data = response.json()
+    st.write(f'Exchange Rates (Base: {base_currency}):')
+    st.json(data)
+else:
+    st.error(f"API call failed with status code: {response.status_code}")
