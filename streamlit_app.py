@@ -1,8 +1,8 @@
-import streamlit as st
+import streamlit as st 
 import requests
 
-# Show a logo image (replace 'logo.png' with your actual file name)
-st.image('https://brand.umpsa.edu.my/index.php/en/logo/pembentukan-logo-dengan-grid', width=150)  # You can adjust width as needed
+# Show UMPSA logo
+st.image("https://upload.wikimedia.org/wikipedia/ms/2/29/Logo_Universiti_Malaysia_Pahang.svg", width=200)
 
 # Set the app title 
 st.title('Ipan Exchancer') 
@@ -24,10 +24,4 @@ base_currency = st.selectbox('Select base currency:', currencies)
 url = f'https://api.vatcomply.com/rates?base={base_currency}'
 response = requests.get(url)
 
-if response.status_code == 200:
-    data = response.json()
-    st.write(f'Exchange Rates (Base: {base_currency}):')
-    st.json(data)
-else:
-    st.error(f"API call failed with status code: {response.status_code}")
-
+if response.status_cod_
