@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Show a logo image (replace 'logo.png' with your actual file name)
-st.image('logo.png', width=150)  # You can adjust width as needed
+st.image('https://brand.umpsa.edu.my/index.php/en/logo/pembentukan-logo-dengan-grid', width=150)  # You can adjust width as needed
 
 # Set the app title 
 st.title('Ipan Exchancer') 
